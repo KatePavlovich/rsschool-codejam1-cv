@@ -148,18 +148,27 @@ footer {
 }
 
 .contact-style {
-    height: 4em;
+    height: 17em;
 }
 
 .contact-list {
     display: grid;
-    grid-template-columns: repeat(5, 1fr);
+    grid-template-columns: repeat(3, 1fr);
 }
 
 .contact-item {
-    list-style-type: none;
-    margin: 1em;
-    text-align: center;
+  list-style-type: none;
+  margin: 0.1em;
+  text-align: center;
+  font-size: 3em;
+}
+
+.contact-item:nth-child(even) {
+    grid-column: 3;
+}
+
+.contact-item:last-child {
+    grid-column: 2;
 }
 
 .fa {
