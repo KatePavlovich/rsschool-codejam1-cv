@@ -7,6 +7,7 @@
   }
   body {
     font-family: 'Raleway', Helvetica, sans-serif;
+    min-height: 100%;
   }
   header {
     display: grid;
@@ -36,4 +37,46 @@
     font-size: 1em;
     text-transform: capitalize;
     font-weight: 900;
+  }
+  main {
+   min-height: calc(100vh - 8em);
+ }
+
+  .contact-style, 
+  footer {
+    display: grid;
+    justify-items: center;
+    padding: 0.7em;
+    background-color: #85d836;
+  }
+  .contact-style {
+    height: 4em;
+  }
+  .contact-list {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+  }
+  .contact-item {
+    list-style-type: none;
+    margin: 1em;
+    text-align: center;
+  }
+  .fa {
+    color: white;
+    font-size: 5em;
+  }
+  .fa:hover, .nav-link:hover {
+    color: #ae003a;
+    transition: .5s;
+  }
+  .fa-heart {
+    font-size: 1em;
+    color: #ae003a;
+  }
+  .fa-mobile {
+    font-size: 7em;
+  }
+  footer {
+    background: #530053;
+    color: #fff;
   }
