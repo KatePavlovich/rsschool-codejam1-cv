@@ -157,10 +157,10 @@ footer {
 }
 
 .contact-item {
-  list-style-type: none;
-  margin: 0.1em;
-  text-align: center;
-  font-size: 3em;
+    list-style-type: none;
+    margin: 0.1em;
+    text-align: center;
+    font-size: 3em;
 }
 
 .contact-item:nth-child(even) {
@@ -194,4 +194,59 @@ footer {
 footer {
     background: #530053;
     color: #fff;
+}
+
+@media (min-width: 768px) {
+    .header-navbar {
+        display: grid;
+        grid-template-areas: ". col";
+        grid-template-columns: [col] 2fr [col] 1fr;
+    }
+    .header-menu {
+        grid-area: col;
+    }
+    .header-menu li {
+        justify-self: end;
+    }
+    .welcome-section {
+        height: auto;
+    }
+    .contact-style {
+        height: 9em;
+    }
+    .contact-list {
+        grid-template-columns: repeat(5, 1fr);
+        align-items: center;
+    }
+    .contact-item:nth-child(even) {
+        grid-column: unset;
+    }
+    .contact-item:last-child {
+        grid-column: unset;
+    }
+}
+
+@media (min-width: 1024px) {
+    body {
+        width: 1024px;
+        margin: 0 auto;
+    }
+    header {
+        width: 1024px;
+    }
+    .header-navbar {
+        grid-template-columns: [col] 3fr [col] 1fr;
+    }
+    .header-menu {
+        grid-gap: 5em;
+        margin-right: 1em;
+    }
+    .content {
+        background: url(../img/35968491-pastel-wallpaper.jpg);
+    }
+    .grid {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        grid-gap: 4em;
+    }
 }
