@@ -55,7 +55,6 @@ main {
     height: 100vh;
     overflow: auto;
     display: grid;
-    justify-items: center;
     background: #99c3c8;
     padding: 1em;
 }
@@ -66,6 +65,7 @@ main {
 
 .description-indent {
     text-indent: 1.5em;
+    margin: 0.5em;
 }
 
 .bio-photo-mob {
@@ -75,15 +75,24 @@ main {
 }
 
 h1 {
-    margin: 0.5em;
+    margin: 1em;
     font-size: 2em;
     color: #555;
+    text-align: center;
 }
 
 .description {
     color: #f9f4ed;
     padding: 1em;
     text-transform: uppercase;
+}
+
+.welcome-section a {
+    color: #000;
+}
+
+.welcome-section a:hover {
+    color: #f9f4ed;
 }
 
 .content {
@@ -123,6 +132,9 @@ h2 {
 
 .item-title {
     padding: 1em 0 0;
+}
+.item-title:hover {
+  color: #ae003a;
 }
 
 .profile-link {
@@ -211,8 +223,31 @@ footer {
     .welcome-section {
         height: auto;
     }
+    .intro-wrapper,
+    .contacts-wrapper-item {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        align-items: center;
+    }
+    .bio-photo-mob {
+        border-radius: 5px;
+        background: #f9f4ed;
+        background-size: contain;
+        justify-self: center;
+    }
+    .description {
+        grid-column: 1;
+        justify-self: center;
+    }
+    .contacts-wrapper {
+        grid-row: 1;
+        grid-column: 2;
+    }
+    .contacts-wrapper-item {
+        justify-items: end;
+    }
     .contact-style {
-        height: 9em;
+        height: 12em;
     }
     .contact-list {
         grid-template-columns: repeat(5, 1fr);
@@ -240,6 +275,14 @@ footer {
     .header-menu {
         grid-gap: 5em;
         margin-right: 1em;
+    }
+    .description-columns {
+        display: grid;
+        grid-template-columns: 2fr 7fr;
+        margin: 1em;
+    }
+    .description-points-style {
+        font-weight: bold;
     }
     .content {
         background: url(../img/35968491-pastel-wallpaper.jpg);
